@@ -4,7 +4,7 @@ namespace Keboola\GenericExtractor\Response;
 
 use Keboola\GenericExtractor\Exception\UserException;
 use Keboola\GenericExtractor\GenericExtractor;
-use Keboola\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Config\JobConfig;
 
 /**
  * Processes data and converts them to scalar values by

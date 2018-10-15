@@ -4,8 +4,8 @@ namespace Keboola\GenericExtractor\Authentication;
 
 use Keboola\GenericExtractor\Configuration\UserFunction;
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Client\RestRequest;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestRequest;
+use Bizztreat\Juicer\Client\RestClient;
 use Keboola\GenericExtractor\Subscriber\LoginSubscriber;
 use Keboola\Utils\Exception\NoDataFoundException;
 

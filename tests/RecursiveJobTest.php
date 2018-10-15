@@ -4,11 +4,11 @@ namespace Keboola\GenericExtractor\Tests;
 
 use Keboola\GenericExtractor\GenericExtractor;
 use Keboola\GenericExtractor\GenericExtractorJob;
-use Keboola\Juicer\Client\RestClient;
-use Keboola\Juicer\Client\RestRequest;
-use Keboola\Juicer\Config\JobConfig;
-use Keboola\Juicer\Pagination\NoScroller;
-use Keboola\Juicer\Parser\Json;
+use Bizztreat\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestRequest;
+use Bizztreat\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Pagination\NoScroller;
+use Bizztreat\Juicer\Parser\Json;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 

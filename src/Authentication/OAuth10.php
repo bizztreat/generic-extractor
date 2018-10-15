@@ -2,7 +2,7 @@
 namespace Keboola\GenericExtractor\Authentication;
 
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 /**

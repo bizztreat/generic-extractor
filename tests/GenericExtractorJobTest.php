@@ -5,12 +5,12 @@ namespace Keboola\GenericExtractor\Tests;
 use Keboola\GenericExtractor\Exception\UserException;
 use Keboola\GenericExtractor\GenericExtractor;
 use Keboola\GenericExtractor\GenericExtractorJob;
-use Keboola\Juicer\Client\RestRequest;
-use Keboola\Juicer\Config\JobConfig;
-use Keboola\Juicer\Pagination\NoScroller;
-use Keboola\Juicer\Pagination\ResponseUrlScroller;
-use Keboola\Juicer\Client\RestClient;
-use Keboola\Juicer\Parser\Json;
+use Bizztreat\Juicer\Client\RestRequest;
+use Bizztreat\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Pagination\NoScroller;
+use Bizztreat\Juicer\Pagination\ResponseUrlScroller;
+use Bizztreat\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Parser\Json;
 use Psr\Log\NullLogger;
 
 class GenericExtractorJobTest extends ExtractorTestCase

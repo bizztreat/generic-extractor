@@ -9,7 +9,7 @@ use Keboola\GenericExtractor\Configuration\Extractor\ConfigFile;
 use Keboola\GenericExtractor\Configuration\Extractor\StateFile;
 use Keboola\GenericExtractor\Exception\ApplicationException;
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Config\Config;
+use Bizztreat\Juicer\Config\Config;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\Definition\Processor;

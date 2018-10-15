@@ -18,7 +18,7 @@ try {
 } catch (UserException $e) {
     $logger->error($e->getMessage(), (array)$e->getData());
     exit(1);
-} catch (\Keboola\Juicer\Exception\UserException $e) {
+} catch (\Bizztreat\Juicer\Exception\UserException $e) {
     $logger->error($e->getMessage(), (array)$e->getData());
     exit(1);
 } catch (ApplicationException $e) {

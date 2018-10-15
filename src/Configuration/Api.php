@@ -5,8 +5,8 @@ namespace Keboola\GenericExtractor\Configuration;
 use Keboola\GenericExtractor\Authentication;
 use Keboola\GenericExtractor\Authentication\AuthInterface;
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Pagination\ScrollerFactory;
-use Keboola\Juicer\Pagination\ScrollerInterface;
+use Bizztreat\Juicer\Pagination\ScrollerFactory;
+use Bizztreat\Juicer\Pagination\ScrollerInterface;
 use Keboola\Utils\Exception\JsonDecodeException;
 use Psr\Log\LoggerInterface;
 

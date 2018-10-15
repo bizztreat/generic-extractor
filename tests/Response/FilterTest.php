@@ -4,7 +4,7 @@ namespace Keboola\GenericExtractor\Tests\Response;
 
 use Keboola\GenericExtractor\GenericExtractor;
 use Keboola\GenericExtractor\Response\Filter;
-use Keboola\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Config\JobConfig;
 use PHPUnit\Framework\TestCase;
 
 class FilterTest extends TestCase

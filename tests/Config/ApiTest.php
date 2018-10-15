@@ -13,7 +13,7 @@ use Keboola\GenericExtractor\Authentication\Query;
 use Keboola\GenericExtractor\Configuration\Api;
 use Keboola\GenericExtractor\Exception\UserException;
 use Keboola\GenericExtractor\Subscriber\AbstractSignature;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 

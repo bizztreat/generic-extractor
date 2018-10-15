@@ -17,8 +17,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/keboola/juicer/zipball/400b3ef069697c33c35d358decdd9cce4b299292",
-                "reference": "400b3ef069697c33c35d358decdd9cce4b299292",
+                "url": "https://api.github.com/repos/bizztreat/juicer/zipball/master",
+                "reference": "master",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Keboola\\Juicer\\": ""
+                    "Bizztreat\\Juicer\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

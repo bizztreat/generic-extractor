@@ -4,7 +4,7 @@ namespace Keboola\GenericExtractor\Authentication;
 
 use Keboola\GenericExtractor\Configuration\UserFunction;
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Client\RestRequest;
+use Bizztreat\Juicer\Client\RestRequest;
 use Keboola\Utils\Exception\JsonDecodeException;
 
 /**

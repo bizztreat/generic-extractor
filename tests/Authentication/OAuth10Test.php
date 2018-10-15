@@ -7,7 +7,7 @@ use GuzzleHttp\Message\Response;
 use GuzzleHttp\Stream\Stream;
 use GuzzleHttp\Subscriber\Mock;
 use GuzzleHttp\Subscriber\History;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 

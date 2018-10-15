@@ -3,7 +3,7 @@
 namespace Keboola\GenericExtractor\Tests\Response;
 
 use Keboola\GenericExtractor\Response\FindResponseArray;
-use Keboola\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Config\JobConfig;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 

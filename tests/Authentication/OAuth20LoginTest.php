@@ -8,7 +8,7 @@ use GuzzleHttp\Stream\Stream;
 use GuzzleHttp\Subscriber\Mock;
 use GuzzleHttp\Subscriber\History;
 use Keboola\GenericExtractor\Tests\ExtractorTestCase;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use Psr\Log\NullLogger;
 
 class OAuth20LoginTest extends ExtractorTestCase

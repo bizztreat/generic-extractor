@@ -3,7 +3,7 @@
 namespace Keboola\GenericExtractor\Tests\Authentication;
 
 use Keboola\GenericExtractor\Authentication\Basic;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
 

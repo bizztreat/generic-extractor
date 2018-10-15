@@ -4,7 +4,7 @@ namespace Keboola\GenericExtractor\Tests\Authentication;
 
 use Keboola\GenericExtractor\Authentication\OAuth20;
 use Keboola\GenericExtractor\Tests\ExtractorTestCase;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use Psr\Log\NullLogger;
 
 class OAuth20Test extends ExtractorTestCase

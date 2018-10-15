@@ -2,7 +2,7 @@
 
 namespace Keboola\GenericExtractor\Authentication;
 
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 
 interface AuthInterface
 {

@@ -3,7 +3,7 @@
 namespace Keboola\GenericExtractor\Authentication;
 
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 
 /**
  * Basic HTTP Authentication using name and password

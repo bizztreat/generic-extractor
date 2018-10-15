@@ -3,7 +3,7 @@
 namespace Keboola\GenericExtractor\Response;
 
 use Keboola\GenericExtractor\Exception\UserException;
-use Keboola\Juicer\Config\JobConfig;
+use Bizztreat\Juicer\Config\JobConfig;
 use Psr\Log\LoggerInterface;
 
 class FindResponseArray

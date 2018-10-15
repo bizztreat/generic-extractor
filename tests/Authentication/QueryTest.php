@@ -7,7 +7,7 @@ use GuzzleHttp\Message\Response;
 use GuzzleHttp\Stream\Stream;
 use GuzzleHttp\Subscriber\Mock;
 use Keboola\GenericExtractor\Tests\ExtractorTestCase;
-use Keboola\Juicer\Client\RestClient;
+use Bizztreat\Juicer\Client\RestClient;
 use Psr\Log\NullLogger;
 
 class QueryTest extends ExtractorTestCase

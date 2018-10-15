@@ -4,9 +4,9 @@ namespace Keboola\GenericExtractor\Tests;
 
 use Keboola\GenericExtractor\Configuration\Api;
 use Keboola\GenericExtractor\GenericExtractor;
-use Keboola\Juicer\Config\Config;
-use Keboola\Juicer\Exception\UserException;
-use Keboola\Juicer\Parser\Json;
+use Bizztreat\Juicer\Config\Config;
+use Bizztreat\Juicer\Exception\UserException;
+use Bizztreat\Juicer\Parser\Json;
 use Keboola\Temp\Temp;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\NullLogger;
