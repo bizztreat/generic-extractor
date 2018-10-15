@@ -1,0 +1,70 @@
+{
+ "parameters": {
+  "api": {
+   "baseUrl": "https://onair.cms.nova.cz/api/v2/"
+  },
+  "config": {
+   "debug": true,
+   "outputBucket": "ex-generic-on-air-devtest",
+   "http": {
+    "headers": {
+     "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI2ZDEyMzhjZDZhNDZkMjdiZjVjMjE3NjQzNmM2ZTdhZjcyMzM3YTQ3ZGEyMjgzNzg0ZDFiMjQ2MTg2YjI5MTlkODJhYTEwMGJkMTIwOGEyIn0.eyJhdWQiOiJvbmFpciIsImp0aSI6ImI2ZDEyMzhjZDZhNDZkMjdiZjVjMjE3NjQzNmM2ZTdhZjcyMzM3YTQ3ZGEyMjgzNzg0ZDFiMjQ2MTg2YjI5MTlkODJhYTEwMGJkMTIwOGEyIiwiaWF0IjoxNTM4OTg4OTk5LCJuYmYiOjE1Mzg5ODg5OTksImV4cCI6NDEwMjQ0MTE5OSwic3ViIjoiMyIsInNjb3BlcyI6W119.HtLkeVV1Otf4jfzWPoeY_NJox11Uv35Xdl77e0Ab48OHGozDkg46CjUF1yUFTq7k4l7Ly2L5yygy8r0oQjRyLAVbpsqfsGg_mAb2cUABB5887PBCTx6ZTproFRPHielYkHQpDLYuYKvtc_CcPAj47NmxjZ6AJqVOndFEWhgGgSAR8zOuBo94kzrC76_viFssueIe27wlYxxNW1S0qcs_Ci77NRIpCK-y0Dkm29bFQhQ-JcjlbMzkkVamPosm9dCeVxltP1VvdDfPYX_NPgL3yg-swOAuy6MS72QMxZTbFPAbZlU7BpB23ZtL_1akaUb4aUYWzg-_NtC2zcizmD2jIg"
+    }
+   },
+   "jobs": [
+    {
+     "endpoint": "episodes/",
+     "dataField": ".",
+     "params": {
+      "fields": [
+       "id",
+       "title",
+       "air_at",
+       "in_archive_from",
+       "in_archive_to",
+       "image",
+       "show.title"
+      ],
+      "conditions": [
+       {
+        "field": "episodes.is_deleted",
+        "value": 0
+       },
+       {
+        "field": "episodes.is_hidden",
+        "value": 0
+       },
+       {
+        "field": "show.is_deleted",
+        "value": 0
+       },
+       {
+        "field": "show.is_hidden",
+        "value": 0
+       },
+       {
+        "field": "video",
+        "value": null,
+        "comparator": "!="
+       },
+       {
+        "field": "show.id",
+        "value": 2
+       }
+      ],
+      "orders": [
+       {
+        "field": "air_at",
+        "direction": "DESC"
+       }
+      ],
+      "groups": null,
+      "limit": 10,
+      "offset": null,
+      "action": null
+     }
+    }
+   ]
+  }
+ }
+}
