@@ -15,6 +15,7 @@
     {
      "endpoint": "episodes/",
      "dataField": ".",
+     "method": "XGET",
      "params": {
       "fields": [
        "id",
