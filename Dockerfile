@@ -21,7 +21,7 @@ COPY php.ini /usr/local/etc/php/
 # First copy only composer files
 COPY composer.* /code/
 # Copy sample config (delete in production)
-COPY sample_config.json /data/config.json
+#COPY sample_config.json /data/config.json
 # Download dependencies, but don't run scripts or init autoloaders as the app is missing
 RUN composer install $COMPOSER_FLAGS --no-scripts --no-autoloader
 # copy rest of the app
