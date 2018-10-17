@@ -228,10 +228,9 @@ class GenericExtractorJob
         }
         $params = $this->flattenParameters($params);
 		
-		echo "\n" . var_export($params,true) . "\n";
-		die;
         $jobs = [];
         foreach ($params as $index => $param) {
+			echo "\n" . var_export($this->attributes,true) . "\n";
             // Clone the config to prevent overwriting the placeholder(s) in endpoint
             $job = new static(
                 clone $config,
