@@ -516,8 +516,10 @@ class GenericExtractorJob
 			
 			echo "\n Params: \n";
 			foreach ($this->config->getParams() as $attributeList) {
+				echo "\n" . var_export($attributeList,true) . "\n";
+				
 				foreach ($attributeList as $attribute) {
-					echo "\n" . var_export($attribute,true) . "\n";
+					echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
 				}
 			}
         }
