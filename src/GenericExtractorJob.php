@@ -555,13 +555,13 @@ class GenericExtractorJob
 						continue;
 					}
 				}
-				//var_dump($parameters);
+				var_dump($parameters);
 			}
 			if ($parameters != NULL) {
 				$this->config->config["params"] = $parameters;
 			}
         }
-		echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
+		//echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
 		echo "\n";
         $this->parentParams = $params;
     }
