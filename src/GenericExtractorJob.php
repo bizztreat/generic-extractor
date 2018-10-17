@@ -526,20 +526,20 @@ class GenericExtractorJob
 			$ph_value = $param['value'];
 			
 			if ($parameters != NULL) {
+				//level 1
 				foreach ($parameters as $a_key => $a_value) {
-					//level 1
 					if (is_string($a_value)) {
 						$parameters[$a_key] = str_replace($ph_name,$ph_value,$a_value);
 						echo $a_key . " = " .$parameters[$a_key] . "\n";
 					} else if (is_array($a_value)) {
+						//level 2
 						foreach ($a_value as $b_key => $b_value) {
-							//level 2
 							if (is_string($b_value)) {
 								$parameters[$b_key] = str_replace($ph_name,$ph_value,$b_value);
 								echo $b_key . " = " .$parameters[$b_key] . "\n";
 							} else if (is_array($b_value)) {
+								//level 3
 								foreach ($b_value as $c_key => $c_value) {
-									//level 3
 									if (is_string($c_value)) {
 										$parameters[$c_key] = str_replace($ph_name,$ph_value,$c_value);
 										echo $c_key . " = " .$parameters[$c_key] . "\n";
@@ -563,7 +563,6 @@ class GenericExtractorJob
         }
 		echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
 		echo "\n";
-		die;
         $this->parentParams = $params;
     }
 
