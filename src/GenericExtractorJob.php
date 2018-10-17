@@ -519,8 +519,8 @@ class GenericExtractorJob
 				if ($attributeList == NULL) continue;
 				
 				foreach ($attributeList as $attribute) {
-					if (is_string($attribute)) {
-						str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
+					if (is_string($attribute["value"])) {
+						str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
 						echo $attribute;
 					}
 					//echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
