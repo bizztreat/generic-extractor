@@ -509,11 +509,14 @@ class GenericExtractorJob
      */
     public function setParams(array $params)
     {
-		echo "\n" . var_export($this->config,true) . "\n";
         foreach ($params as $param) {
             $this->config->setEndpoint(
                 str_replace('{' . $param['placeholder'] . '}', $param['value'], $this->config->getConfig()['endpoint'])
-            );
+				);
+				
+			foreach ($this->config as $attribute) {
+				echo "\n" . var_export($this->config,true) . "\n";
+			}
         }
 
         $this->parentParams = $params;
