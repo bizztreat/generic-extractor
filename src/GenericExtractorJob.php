@@ -231,7 +231,7 @@ class GenericExtractorJob
         $jobs = [];
         foreach ($params as $index => $param) {
             // Clone the config to prevent overwriting the placeholder(s) in endpoint
-			echo "\n" . var_export($param,true) . "\n";
+			
             $job = new static(
                 clone $config,
                 $this->client,
@@ -509,6 +509,7 @@ class GenericExtractorJob
      */
     public function setParams(array $params)
     {
+		echo "\n" . var_export($this->config,true) . "\n";
         foreach ($params as $param) {
             $this->config->setEndpoint(
                 str_replace('{' . $param['placeholder'] . '}', $param['value'], $this->config->getConfig()['endpoint'])
