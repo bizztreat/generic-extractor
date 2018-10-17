@@ -521,18 +521,20 @@ class GenericExtractorJob
 				foreach ($attributeList as $attribute) {
 					if (is_array($attribute)) {
 						if (array_key_exists("value",$attribute) && is_string($attribute["value"])) {
-							$attribute["value"] = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
-							echo $attribute["value"] . "\n";
+							$newval = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
+							$this->config->setParam($attribute["name"],$newval);
 						}
-					} else if (is_string($attribute)) {
+					} /*else if (is_string($attribute)) {
 						$attribute = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
 						echo $attribute;
-					} else {
+					}*/ else {
 						continue;
 					}
 					//echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
 				}
 			}
+			var_dump($this->config->getParams());
+			echo "\n";
 			//echo "\n------\n" . var_export($this->config->getParams(),true) . "\n----------\n";
         }
 
