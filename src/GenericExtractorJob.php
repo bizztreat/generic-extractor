@@ -509,35 +509,54 @@ class GenericExtractorJob
      */
     public function setParams(array $params)
     {
+		
+		if (array_key_exists("params",$this->config->config)) {
+			$parameters = $this->config->config["params"];	
+		} else {
+			$parameters = NULL;
+		}
+		
         foreach ($params as $param) {
+			
             $this->config->setEndpoint(
                 str_replace('{' . $param['placeholder'] . '}', $param['value'], $this->config->getConfig()['endpoint'])
 				);
 			
+			$ph_name = '{' . $param['placeholder'] . '}';
+			$ph_value = $param['value'];
 			
-			echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
-			//echo "\n Params: \n";
-			foreach ($this->config->getParams() as $attributeList) {
-				if ($attributeList == NULL) continue;
-				//echo "\n------\nAttributes list: " . var_export($attributesList,true) . "\n----------\n";
-				foreach ($attributeList as $attribute) {
-					if (is_array($attribute)) {
-						if (array_key_exists("value",$attribute) && is_string($attribute["value"])) {
-							$newval = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
-							//$this->config->setParam($attribute["name"],$newval);
+			if ($parameters != NULL) {
+				foreach ($parameters as $a_key => $a_value) {
+					if (is_string($a_value)) {
+						$parameters[$a_key] = str_replace($ph_name,$ph_value,$a_value);
+						echo $parameters[$a_key] . "\n";
+					} else if (is_array($a_value)) {
+						foreach ($a_value as $b_key => $b_value) {
+							if (is_string($b_value)) {
+								$parameters[$b_key] = str_replace($ph_name,$ph_value,$b_value);
+								echo $parameters[$b_key];
+							} else if (is_array($b_value)) {
+								foreach ($b_value as $c_key => $c_value) {
+									if (is_string($c_value)) {
+										$parameters[$c_key] = str_replace($ph_name,$ph_value,$c_value);
+										echo $parameters[$c_key];
+									} else {
+										continue;
+									}
+								}
+							} else {
+								continue;
+							}
 						}
-					} /*else if (is_string($attribute)) {
-						$attribute = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
-						echo $attribute;
-					}*/ else {
+					} else {
 						continue;
 					}
-					//echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
 				}
 			}
-			//var_dump($this->config->getParams());
-			echo "\n";
-			//echo "\n------\n" . var_export($this->config->getParams(),true) . "\n----------\n";
+			if ($parameters != NULL) {
+				$this->config->config["params"] = $parameters;
+			}
+			//echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
         }
 
         $this->parentParams = $params;
