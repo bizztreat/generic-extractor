@@ -230,8 +230,8 @@ class GenericExtractorJob
 		
         $jobs = [];
         foreach ($params as $index => $param) {
-			echo "\n" . var_export($this->attributes,true) . "\n";
             // Clone the config to prevent overwriting the placeholder(s) in endpoint
+			echo "\n" . var_export($param,true) . "\n";
             $job = new static(
                 clone $config,
                 $this->client,
