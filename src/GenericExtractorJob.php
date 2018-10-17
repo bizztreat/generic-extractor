@@ -514,6 +514,8 @@ class GenericExtractorJob
                 str_replace('{' . $param['placeholder'] . '}', $param['value'], $this->config->getConfig()['endpoint'])
 				);
 			
+			
+			/echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
 			//echo "\n Params: \n";
 			foreach ($this->config->getParams() as $attributeList) {
 				if ($attributeList == NULL) continue;
@@ -522,7 +524,7 @@ class GenericExtractorJob
 					if (is_array($attribute)) {
 						if (array_key_exists("value",$attribute) && is_string($attribute["value"])) {
 							$newval = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
-							$this->config->setParam($attribute["name"],$newval);
+							//$this->config->setParam($attribute["name"],$newval);
 						}
 					} /*else if (is_string($attribute)) {
 						$attribute = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
@@ -533,7 +535,7 @@ class GenericExtractorJob
 					//echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
 				}
 			}
-			var_dump($this->config->getParams());
+			//var_dump($this->config->getParams());
 			echo "\n";
 			//echo "\n------\n" . var_export($this->config->getParams(),true) . "\n----------\n";
         }
