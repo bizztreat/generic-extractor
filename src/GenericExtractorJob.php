@@ -212,8 +212,6 @@ class GenericExtractorJob
 
         $params = [];
 		
-		echo "\n".var_export($config)."\n";
-		die;
         $placeholders = !empty($config->getConfig()['placeholders']) ? $config->getConfig()['placeholders'] : [];
         if (empty($placeholders)) {
             $this->logger->warning("No 'placeholders' set for '" . $config->getConfig()['endpoint'] . "'");
@@ -222,14 +220,16 @@ class GenericExtractorJob
         foreach ($placeholders as $placeholder => $field) {
             $params[$placeholder] = $this->getPlaceholder($placeholder, $field, $parentResults);
         }
-
+		
         // Add parent params as well (for 'tagging' child-parent data)
         // Same placeholder in deeper nesting replaces parent value
         if (!empty($this->parentParams)) {
             $params = array_replace($this->parentParams, $params);
         }
         $params = $this->flattenParameters($params);
-
+		
+		echo "\n" . var_export($params,true) . "\n";
+		die;
         $jobs = [];
         foreach ($params as $index => $param) {
             // Clone the config to prevent overwriting the placeholder(s) in endpoint
