@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# exit if not tagged
+if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
+
 docker images
 docker pull quay.io/keboola/developer-portal-cli-v2:latest
 
