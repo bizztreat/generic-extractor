@@ -85,9 +85,6 @@ class GenericExtractor
 
     public function run(Config $config)
     {
-		echo "\nDEBUG_LOG: Config\n";
-		echo var_export($config,true);
-		echo "\n";
         $client = new RestClient(
             $this->logger,
             [

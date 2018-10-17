@@ -211,6 +211,9 @@ class GenericExtractorJob
         $scroller->reset();
 
         $params = [];
+		
+		echo "\n".var_export($config)."\n";
+		die;
         $placeholders = !empty($config->getConfig()['placeholders']) ? $config->getConfig()['placeholders'] : [];
         if (empty($placeholders)) {
             $this->logger->warning("No 'placeholders' set for '" . $config->getConfig()['endpoint'] . "'");
