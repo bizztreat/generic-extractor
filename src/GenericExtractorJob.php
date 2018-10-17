@@ -521,11 +521,12 @@ class GenericExtractorJob
 				foreach ($attributeList as $attribute) {
 					if (is_array($attribute)) {
 						if (array_key_exists("value",$attribute) && is_string($attribute["value"])) {
-							str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
+							$attribute["value"] = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
 							echo $attribute["value"] . "\n";
 						}
 					} else if (is_string($attribute)) {
-						str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
+						$attribute = str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
+						echo $attribute;
 					} else {
 						continue;
 					}
