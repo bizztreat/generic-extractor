@@ -520,6 +520,7 @@ class GenericExtractorJob
 				//echo "\n------\nAttributes list: " . var_export($attributesList,true) . "\n----------\n";
 				foreach ($attributeList as $attribute) {
 					if (is_array($attribute)) {
+						echo "is array!\n";
 						if (array_key_exists("value",$attribute) && is_string($attribute["value"])) {
 							str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute["value"]);
 							//echo $attribute["value"] . "\n";
