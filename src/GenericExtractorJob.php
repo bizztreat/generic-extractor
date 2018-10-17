@@ -513,7 +513,8 @@ class GenericExtractorJob
             $this->config->setEndpoint(
                 str_replace('{' . $param['placeholder'] . '}', $param['value'], $this->config->getConfig()['endpoint'])
 				);
-				
+			
+			echo "\n Params: \n";
 			foreach ($this->config as $attribute) {
 				echo "\n" . var_export($this->config,true) . "\n";
 			}
