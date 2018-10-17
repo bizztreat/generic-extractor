@@ -552,6 +552,9 @@ class GenericExtractorJob
 						continue;
 					}
 				}
+				var_dump($parameters);
+				echo "\n";
+				die;
 			}
 			if ($parameters != NULL) {
 				$this->config->config["params"] = $parameters;
