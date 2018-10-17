@@ -85,7 +85,7 @@ class GenericExtractor
 
     public function run(Config $config)
     {
-		echo var_export($config->getAttributes()],true);
+		echo var_export($config->getAttributes(),true);
         $client = new RestClient(
             $this->logger,
             [
