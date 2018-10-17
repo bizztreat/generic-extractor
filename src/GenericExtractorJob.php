@@ -535,14 +535,14 @@ class GenericExtractorJob
 						//level 2
 						foreach ($a_value as $b_key => $b_value) {
 							if (is_string($b_value)) {
-								$parameters[$b_key] = str_replace($ph_name,$ph_value,$b_value);
-								echo $b_key . " = " .$parameters[$b_key] . "\n";
+								$parameters[$a_key][$b_key] = str_replace($ph_name,$ph_value,$b_value);
+								echo $b_key . " = " .$parameters[$a_key][$b_key] . "\n";
 							} else if (is_array($b_value)) {
 								//level 3
 								foreach ($b_value as $c_key => $c_value) {
 									if (is_string($c_value)) {
-										$parameters[$c_key] = str_replace($ph_name,$ph_value,$c_value);
-										echo $c_key . " = " .$parameters[$c_key] . "\n";
+										$parameters[$a_key][$b_key][$c_key] = str_replace($ph_name,$ph_value,$c_value);
+										echo $c_key . " = " .$parameters[$a_key][$b_key][$c_key] . "\n";
 									} else {
 										continue;
 									}
