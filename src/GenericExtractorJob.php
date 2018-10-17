@@ -560,11 +560,10 @@ class GenericExtractorJob
 			if ($parameters != NULL) {
 				$this->config->config["params"] = $parameters;
 			}
-			echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
-			echo "\n";
-			die;
         }
-
+		echo "\n------\n" . var_export($this->config->config,true) . "\n----------\n";
+		echo "\n";
+		die;
         $this->parentParams = $params;
     }
 
