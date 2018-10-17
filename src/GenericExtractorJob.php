@@ -519,9 +519,14 @@ class GenericExtractorJob
 				if ($attributeList == NULL) continue;
 				
 				foreach ($attributeList as $attribute) {
-					echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
+					if (is_string($attribute)) {
+						str_replace('{' . $param['placeholder'] . '}', $param["value"], $attribute);
+						echo $attribute;
+					}
+					//echo "\n------\n" . var_export($attribute,true) . "\n----------\n";
 				}
 			}
+			echo "\n------\n" . var_export($this->config->getParams(),true) . "\n----------\n";
         }
 
         $this->parentParams = $params;
